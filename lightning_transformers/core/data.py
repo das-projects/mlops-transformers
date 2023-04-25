@@ -49,7 +49,7 @@ class TransformerDataModule(pl.LightningDataModule):
         padding: Union[str, bool] = "max_length",
         truncation: str = "only_first",
         max_length: int = 128,
-        preprocessing_num_workers: int = 1,
+        preprocessing_num_workers: int = 0,
         load_from_cache_file: bool = True,
         cache_dir: Optional[Union[Path, str]] = None,
         limit_train_samples: Optional[int] = None,

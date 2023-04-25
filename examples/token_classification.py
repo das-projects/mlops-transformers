@@ -1,5 +1,6 @@
 import pytorch_lightning as pl
 from transformers import AutoTokenizer
+import os
 
 from lightning_transformers.task.nlp.token_classification import (
     TokenClassificationDataModule,
@@ -11,7 +12,7 @@ if __name__ == "__main__":
     dm = TokenClassificationDataModule(
         batch_size=1,
         task_name="ner",
-        dataset_name="nielsr/funsd-layoutlmv3",
+        dataset_name="nielsr/funsd-iob-original",
         preprocessing_num_workers=1,
         label_all_tokens=False,
         revision="master",
