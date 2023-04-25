@@ -65,10 +65,10 @@ class TokenClassificationTransformer(TaskTransformer):
         return self.common_step("test", batch)
 
     def configure_metrics(self, _) -> None:
-        self.prec = Precision(num_classes=self.num_labels)
-        self.recall = Recall(num_classes=self.num_labels)
-        self.f1 = F1Score(num_classes=self.num_labels)
-        self.acc = Accuracy()
+        self.prec = Precision(task="multiclass", num_classes=self.num_labels)
+        self.recall = Recall(task="multiclass", num_classes=self.num_labels)
+        self.f1 = F1Score(task="multiclass", num_classes=self.num_labels)
+        self.acc = Accuracy(task="multiclass", num_classes=self.num_labels)
         self.metrics = {"precision": self.prec, "recall": self.recall, "accuracy": self.acc, "f1": self.f1}
 
     @property

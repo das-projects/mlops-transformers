@@ -11,7 +11,7 @@ if __name__ == "__main__":
     dm = TokenClassificationDataModule(
         batch_size=1,
         task_name="ner",
-        dataset_name="conll2003",
+        dataset_name="nielsr/funsd-layoutlmv3",
         preprocessing_num_workers=1,
         label_all_tokens=False,
         revision="master",

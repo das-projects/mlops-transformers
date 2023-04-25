@@ -41,7 +41,7 @@ class TransformerDataModule(pl.LightningDataModule):
         dataset_name: Optional[str] = None,
         dataset_config_name: Optional[str] = None,
         revision: Optional[Union[str, Version]] = None,
-        train_val_split: Optional[int] = None,
+        train_val_split: Optional[int] = 0.1,
         train_file: Optional[str] = None,
         test_file: Optional[str] = None,
         predict_file: Optional[str] = None,
